@@ -8,14 +8,17 @@ const Navbar = () => {
   return (
     <Stack
       direction="row"
-      justifyContent="space-between"
-      alignItems="center"
-      padding="20px 0"
-      borderBottom="1px solid #E5E5E5"
+      justifyContent="space-between" 
+      sx={{
+        gap: {sm: '122px', xs: '40px'}, 
+        mt: { sm:'32px', xs: '20px'},
+        justifyContent: 'none'
+      }}
+      px="20px"
     >
       <Link to ="/">
         <img src={Logo} alt="Logo" style={{
-          width: '48px' , height: '48px', margin: '0 20px'
+          width: '48px' , height: '48px', margin: '0px 20px'
         }} />
       </Link>
       <Stack
@@ -25,10 +28,10 @@ const Navbar = () => {
        alignItems="flex-end"
       >
         <Link to="/"> Home</Link>
-        <a href="#excercises" style={{ textDecoration: 'none',
+        <a href="#exercises" style={{ textDecoration: 'none',
          color: '#3A1212',
          borderBottom: '3px solid #FF2625'
-         }}>Excercises</a>
+         }}>Exercises</a>
       </Stack>
     </Stack>
   )
